@@ -1,5 +1,8 @@
-{% extends "@EasyAdmin/page/content.html.twig" %}
-
+{% extends '@!EasyAdmin/layout.html.twig' %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.dark.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+{% endblock %}
 {% block main %}
-<h1>Administer vos formations</h1>
+	<h1>Administer vos formations</h1>
 {% endblock %}

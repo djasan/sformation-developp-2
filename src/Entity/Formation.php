@@ -32,6 +32,9 @@ class Formation
     #[ORM\Column(type: Types::TEXT)]
     private ?string $resume = null;
 
+    #[ORM\ManyToOne(inversedBy: 'formations')]
+    private ?Category $Category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Formation
     public function setResume(string $resume): static
     {
         $this->resume = $resume;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->Category;
+    }
+
+    public function setCategory(?Category $Category): static
+    {
+        $this->Category = $Category;
 
         return $this;
     }
