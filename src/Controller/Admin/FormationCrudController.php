@@ -15,14 +15,14 @@ class FormationCrudController extends AbstractCrudController
         return Formation::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
             IdField::new('id'),
-            TextField::new('title'),
+            TextField::new('titre'),
             TextEditorField::new('description'),
         ];
     }
-    */
+    
 }

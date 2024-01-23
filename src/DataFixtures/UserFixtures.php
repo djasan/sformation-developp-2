@@ -13,7 +13,7 @@ class UserFixtures extends Fixture
     {
         $faker = Factory::create('fr_FR');
 
-        for ($i = 0; $i <= 100; $i++) {
+        for ($i = 0; $i <= 10; $i++) {
             $user = new User();
 
             $user->setNom($faker->lastName());
@@ -25,9 +25,9 @@ class UserFixtures extends Fixture
             $user->setRoles([$faker->randomElement(['ROLE_USER', 'ROLE_ADMIN'])]);
             $user->setPassword($faker->password());
 
-            $manager->persist($user);
+            //$manager->persist($user);
         }
 
-        $manager->flush();
+        //$manager->flush();
     }
 }

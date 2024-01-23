@@ -14,7 +14,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{ formation.titre }}</h5>
 					<p class="card-text">{{ formation.resume }}.</p>
-					<a href="#" class="btn btn-primary">Details</a>
+					<a href="{{ path('app_formation_show', {'id': formation.id}) }}" class="btn btn-primary">Details</a>
 				</div>
 			</div>
 		{% endfor %}
