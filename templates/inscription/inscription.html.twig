@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('assets/css/form.css') }}">
+{% endblock %}
+
+{% block body %}
+	<section class="w-50 mx-auto">
+		<h1 class="text-center">Inscription</h1>
+
+		{{ form_errors(inscriptionForm) }}
+
+		{{ form_start(inscriptionForm) }}
+
+		{{ form_row(inscriptionForm.nom) }}
+		{{ form_row(inscriptionForm.prenom) }}
+		{{ form_row(inscriptionForm.age) }}
+		{{ form_row(inscriptionForm.telephone) }}
+		{{ form_row(inscriptionForm.adresse) }}
+		{{ form_row(inscriptionForm.email) }}
+		{{ form_row(inscriptionForm.plainPassword, {
+				label: 'Password'
+			}) }}
+		{{ form_row(inscriptionForm.agreeTerms) }}
+
+		<button type="submit" class="btn btn-primary">Inscription</button>
+		{{ form_end(inscriptionForm) }}
+	</section>
+{% endblock %}
